@@ -22,7 +22,7 @@ with open('廣韻反切音韻地位表.csv') as f:
         小韻號, 小韻首字, 上字, 下字, 被切字音韻描述們, 上字音韻描述們, 下字音韻描述們 = line.rstrip('\n').split(',')
 
         # 由音韻描述建立音韻地位對象
-        # 可能有多種可能的音韻地位，以 / 分隔，所以需要轉換為 list
+        # 可能有多種可能的音韻地位，以 / 分隔，所以需要轉換爲 list
         被切字音韻地位們 = list(map(QieyunEncoder.音韻地位.from描述, 被切字音韻描述們.split('/')))
         上字音韻地位們 = list(map(QieyunEncoder.音韻地位.from描述, 上字音韻描述們.split('/')))
         下字音韻地位們 = list(map(QieyunEncoder.音韻地位.from描述, 下字音韻描述們.split('/')))
