@@ -47,7 +47,7 @@ with open('廣韻反切音韻地位表.csv') as f:
 fig, ax = plt.subplots()
 
 # 計算各坐標的位置
-positions = list(accumulate(range(len(QieyunEncoder.常量.所有韻) - 1), lambda x, _: x + 0.5, initial=0.5))
+positions = list(accumulate(range(len(QieyunEncoder.常量.所有韻) - 1), lambda x, _: x + 0.75, initial=0.5))
 
 # 繪圖
 p1 = ax.bar(positions, 各韻頻次, width=0.5, edgecolor='black', color='#ccc')
